@@ -1,0 +1,58 @@
+/* Page styling */
+body{
+    margin: 0;
+    padding: 0;
+    background-color: chartreuse;
+    font-family: Areial, sans-serif;
+}
+
+/* Container */
+.container{
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+/* Heading */
+h1{
+    color: blue;
+    margin-bottom: 30px;
+}
+
+/* Card UI using Box Model */
+.card{
+    background-color: aqua;
+    color: crimson;
+
+    width: 500px;
+
+    /* Box Model Properties */
+    padding: 20px;
+    border: 5px solid mediumseagreen;
+    margin: 20px auto;
+
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255,234,56,33);
+}
+
+/* Card Heading*/
+.card h2{
+    color: green;
+}
+
+/* Button */
+button{
+    background-color: yellow;
+    color: orangered;
+
+    padding: 10px 20px;
+    border: none;
+    margin-top: 15px;
+
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: blue;
+}

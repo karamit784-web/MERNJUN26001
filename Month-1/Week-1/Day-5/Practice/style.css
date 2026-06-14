@@ -1,0 +1,103 @@
+
+/*Selectors*/
+
+    /*Types of selectors
+        =>simple selector
+            ->id selector
+            ->class selector
+            ->tag name selector
+            ->group name selector
+            ->universal selector*/
+
+#paragraph{
+    background-color: aqua;
+}
+.p-class{
+    color: coral;
+}
+h1{
+    background-color: blue;
+}
+#paragraph,h1{
+    font-style: italic;
+}
+/*Universal selector*/
+/*
+*{
+    font-family: fantasy;
+}
+*/
+
+/*=>Combinator selector
+    ->Descendent selector
+    ->Child selector
+    ->Adjacent sibling selector
+    ->General sibling selector*/
+
+.parent p{
+    background-color: chartreuse;
+}
+.parent>p{
+    color: crimson;
+}
+
+.parent+ div{
+    color: darkgray;
+}
+
+.parent~ div{
+    background-color: darkorchid;
+}
+
+/* =>Pseudo class selector
+        ->Hover
+        ->Active
+        ->Focus
+        ->first-child
+        ->last-child
+        ->nth-child
+*/
+
+section{
+    width: 100px;
+    height: 50px;
+    background-color: blue;
+}
+
+section:hover{
+    background-color: coral;
+    font-size: 20px;
+}
+
+section:active{
+    background-color: yellow;
+}
+
+input:focus{
+    background-color: darkgreen;
+}
+
+li:first-child{
+    color: red;
+}
+li:last-child{
+    color: blueviolet;
+}
+li:nth-child(3){
+    color: brown;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+/*Box-model*/
+
+.box{
+    width: 100px;
+    height: 100px;
+    padding: 10px 5px;
+    border: 10px dotted red;
+    margin: 100px 300px;
+    margin-left: 400px;
+}
