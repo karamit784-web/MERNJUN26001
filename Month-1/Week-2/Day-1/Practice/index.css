@@ -1,0 +1,40 @@
+
+/* Display Flex*/
+.container{
+            width: 800px;
+            height: 400px;
+            border: 1px solid blue;
+            margin: 20px auto;
+            display: flex;
+            /* flex-direction: column; */
+            gap: 5px;
+            /* justify-content: space-around; */
+
+}
+.item{
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+}
+/*
+.item1{
+    background-color: blueviolet;
+    order: 2;
+}
+.item2{
+    background-color: blue;
+    order: 1;
+}
+.item3{
+    background-color: coral;
+    order: 5;
+}
+.item4{
+    background-color: chartreuse;
+    order: 3;
+}
+.item5{
+    background-color: mediumturquoise;
+    order: 4;
+}
+*/
