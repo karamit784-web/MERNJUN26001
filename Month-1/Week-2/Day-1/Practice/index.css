@@ -9,7 +9,7 @@
             /* flex-direction: column; */
             gap: 5px;
             /* justify-content: space-around; */
-
+            /* align-content: space-around; */
 }
 .item{
     width: 100px;
