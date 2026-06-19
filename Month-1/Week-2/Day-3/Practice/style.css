@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1{
+    background-color: chartreuse;
+}
+
+/*Display
+    =>Inline
+    =>Block
+    =>Inline-Block
+    =>Flex
+    =>Grid
+*/
+
+/* Grid */
+
+.grid-container{
+    width: 400px;
+    height: 500px;
+    margin: 10px auto;
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 4px;
+    padding: 3px;
+}
+
+.item{
+    border: 1px solid blue;
+    box-shadow: 2px 2px 5px blue;
+}
+
+.header, .hero{
+    grid-column: 1/4;
+}
+
+.menu{
+    grid-row: 3/6;
+}
+
+.main, .banner{
+    grid-column: 2/4;
+}
+
+.extra{
+    grid-column: 2/3;
+}
+
+.image{
+    grid-column: 3/4;
+}
+
+
+.p-box{
+    width: 100px;
+    height: 100px;
+    box-shadow: 2px 2px 5px red;
+    margin: auto;
+    transition: all 2s ease;
+}
+
+.p-box p{
+    transition: all 2s ease;
+}
+
+.p-box p:hover{
+    color: orangered;
+    background-color: antiquewhite;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.p-box:hover{
+    transform: rotate(90deg);
+    transform: translate(100px);
+    transform: scale(2);
+    transform-origin: center;
+    transform: skew(180deg);
+}
+
+/* Animation */
+
+.color-box{
+    width: 150px;
+    height: 150px;
+    border: 2px solid blue;
+    margin: 10px auto;
+    animation: spin 4s ease infinite;
+}    
+
+
+
+@keyframes spin{
+    0%{
+        background-color: red;
+    }
+    25%{
+        background-color: blue;
+    }
+    50%{
+        background-color: yellow;
+    }
+    75%{
+        background-color: aqua;
+    }
+    90%{
+        background-color: darkorange;
+    }
+    100%{
+        background-color: red;
+    }
+}
