@@ -31,54 +31,105 @@ promise.then((res) => {
 }
 getData();
 
+async function getAllData() {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+    const data = await response.json();
+
+    console.log(data);
+  } catch (error) {}
+}
+
+getAllData();
+
 // CRUD
     //Create
     //Read
     //Update
     //Delete
 
- async function createData(){
-    try{
-        const response = await fetch("https://jsonplaceholder.typicode.com/posts",{
-            method:"POST",
-            body:JSON.stringify({
-                name:"Amit",
-                age:21
-            })
-        });
-        const data = await response.json();
+ async function createData() {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts",{
+        method:"POST",
+        body:JSON.stringify({
+            name:"hello",
+            age:30
+        }),
+        headers:{
+            "Content-Type":"application/json"
+        }
+    });
+    const data = await response.json();
 
-        console.log(data);
-    }catch(error){
-
-    }
+    console.log(data)
+  } catch (error) {}
 }
 
 createData();
 
- async function getDataById(){
-    try{
-        const response = await fetch("https://jsonplaceholder.typicode.com/posts");
-        const data = await response.json();
+async function getDataById() {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts/5");
+    const data = await response.json();
 
-        console.log(data);
-    }catch(error){
-
-    }
+    console.log(data);
+  } catch (error) {}
 }
 
-getDataById();
+getDataById()
 
 
 
 
+async function updateData() {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts/5",{
+        method:"PATCH",
+        body:JSON.stringify({
+            name:"hello",
+            age:30
+        }),
+        headers:{
+            "Content-Type":"application/json"
+        }
+    });
+    const data = await response.json();
+
+    console.log(data)
+  } catch (error) {
+
+  }
+}
+
+updateData()
 
 
-//String interpolation
-console.log("hii" + 2);
+async function deleteData() {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts/5",{
+        method:"DELETE",
+        
+    });
+    const data = await response.json();
 
-let str = `this is the Qlith ${2026}`;
+    console.log(data)
+  } catch (error) {
+
+  }
+}
+
+deleteData()
+
+
+
+// String interpolation
+console.log("hii" + 2)
+
+let str=`this is the Qlith ${2026}`;
 console.log(str);
+
+
 
 //MATH Object
 console.log(Math.PI);
@@ -86,6 +137,7 @@ console.log(Math.LN10);
 
 console.log(Math.sqrt(99));
 console.log(Math.min(1, 2, 3));
+console.log(Math.max(45, 2, 34, 7));
 console.log(Math.random(9));
-console.log(Math.floor(9.9));
-console.log(Math.ceil(9.9));
+console.log(Math.floor(4.5));
+console.log(Math.ceil(4.00008));
